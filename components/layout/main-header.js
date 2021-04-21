@@ -11,7 +11,7 @@ return <header className={styles.header}>
     <nav className={styles.navigation}>
         <ul>
             <li>
-                <Link href="/">Browse Events</Link>
+                <Link href="/events">Browse Events</Link>
             </li>
         </ul>
     </nav>

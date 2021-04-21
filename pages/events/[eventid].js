@@ -5,6 +5,8 @@ import EventLogistics from '../../components/event-detail/event-logistics';
 import EventContent from '../../components/event-detail/event-content';
 
 import { getEventById } from '../../dummy-data';
+import ErrorAlert from '../../components/UI/error-alert';
+import Button from '../../components/UI/button';
 
 function EventDetailPage(){
 
@@ -13,7 +15,13 @@ function EventDetailPage(){
     const event = getEventById(eventId);
 
     if(!event){
-        return <p> No event found!</p>
+    
+        return (
+        <ErrorAlert>
+            <p> No event found!</p>
+            <Button link="/events">Show All Events</Button>
+            </ErrorAlert>
+        )
     }
     else{
     return(
